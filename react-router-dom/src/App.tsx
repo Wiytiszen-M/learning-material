@@ -1,10 +1,28 @@
+import { Link } from "react-router-dom";
 import "./App.css";
+import { Router } from "./routes";
 
 const App = () => {
   return (
-    <header className="App-header">
-      <h1>React-Router</h1>
-    </header>
+    <>
+      <header className="App-header">
+        <h1>React-Router</h1>
+      </header>
+      <nav
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "500px",
+          margin: "0 auto",
+        }}
+      >
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/Contact">Contact</Link>
+      </nav>
+      <Router />
+    </>
   );
 };
 
