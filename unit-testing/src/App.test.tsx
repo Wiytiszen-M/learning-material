@@ -3,7 +3,7 @@ import App from "./App";
 
 test("Renders main page correctly", async () => {
   render(<App />);
-  const buttonCount = await screen.findByRole("button");
-  expect(buttonCount.innerHTML).toBe("count is 0");
+  const countText = screen.getByTestId("title");
+  expect(countText.innerHTML).toBe("Unit Testing Libraries");
   expect(true).toBeTruthy();
 });
